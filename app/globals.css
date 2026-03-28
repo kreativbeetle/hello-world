@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --color-charcoal: #1f2329;
+  --color-forest: #2f4736;
+  --color-gold: #b59a5a;
+  --color-ivory: #f7f5f0;
+  --color-stone: #d8d1c5;
+  --radius-card: 0.875rem;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
