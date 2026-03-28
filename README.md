@@ -1,9 +1,64 @@
-# hello-world
-This is my first GitHub project
-I am a fairly new web developer. I am submersing myself in code, code, code. I am setting out to master javaScript, python, Ruby, and some I don't know about yet. Oh, and many of the frameworks out there. Once I get a good grasp, I'd like to author a framework to use. 
+# Anderson Property Preservation (APP)
 
-My company is kreativ beetle media development. I will master digital and creative media. These are important to communication in the world, just as body language is. Communication media IS the global body language.
+Production scaffold for **Next.js + Payload CMS + Tailwind** aligned to APP architecture.
 
-More than that, I want to contribute as much as possible to the world. I believe communication, expression of self, is the basis for freedom - within and without. I'd like to help facilitate this for all people. The universe is abundant. There's more than enough abundancy for ALL people to share and partake.
+## Stack pins
 
-Peace.
+- Node.js 20.x
+- Next.js 15.4.x
+- Payload CMS 3.x (Next.js-compatible)
+- PostgreSQL (RDS target)
+- S3 (media + estimate uploads)
+- SES (transactional email)
+
+## Quick start
+
+1. Install dependencies
+   ```bash
+   npm install
+   ```
+2. Copy env file
+   ```bash
+   cp .env.example .env.local
+   ```
+3. Run dev server
+   ```bash
+   npm run dev
+   ```
+
+## Route scaffold
+
+The following public routes are scaffolded in the App Router:
+
+- `/`
+- `/services`
+- `/property-cleanouts-columbus-ga`
+- `/junk-removal-columbus-ga`
+- `/lawn-overgrowth-cleanup-columbus-ga`
+- `/rental-turnover-cleanup-columbus-ga`
+- `/property-managers-investors`
+- `/service-areas`
+- `/service-areas/columbus-muscogee`
+- `/service-areas/harris-county-ga`
+- `/service-areas/russell-county-al`
+- `/before-after-gallery`
+- `/about`
+- `/request-estimate`
+- `/thank-you`
+- `/privacy-policy`
+
+## Payload scaffold status
+
+Implemented collections/globals:
+
+- collections: `users`, `media`, `pages`, `services`, `serviceAreas`, `galleryItems`, `reviews`, `faqs`, `estimateSubmissions`
+- globals: `siteSettings`, `headerSettings`, `footerSettings`, `homepage`
+
+## Next implementation milestones
+
+1. Complete Payload official Next admin route wiring.
+2. Add dynamic page rendering from Payload docs.
+3. Implement S3 pre-signed upload flow in `app/api/uploads/presign/route.ts`.
+4. Implement estimate save + SES notifications in `app/api/estimates/route.ts`.
+5. Add SEO utilities (metadata, sitemap, robots, schema).
+6. Add analytics events and spam protection.
